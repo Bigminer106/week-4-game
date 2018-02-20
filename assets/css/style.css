@@ -1,0 +1,42 @@
+body {
+  font-size: 36px;
+  font-weight: 100%;
+  background-color: lightsteelblue;
+}
+
+.gameTitle {
+  font-size: 2rem;
+  width: 300px;
+  text-decoration: underline black;
+  background-color: lightsalmon;
+}
+
+.rules {
+  font-size: 1.5rem;
+  text-decoration: underline black;
+}
+
+.descript {
+  width: 550px;
+  float: left;
+  background-color: lightgray;
+}
+
+.rngShown {
+  background-color: gold;
+  width: 550px;
+}
+
+.winLoss {
+  background-color: honeydew;
+  width: 550px;
+}
+
+.gems {
+  width: 550px;
+}
+
+.totalScore {
+  background-color: green;
+  width: 550px;
+}
