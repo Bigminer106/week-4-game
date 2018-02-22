@@ -16,8 +16,68 @@ $(document).ready(function () {
 
   function randomNumberFromRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+  };
+
+  function gameReset() {
+    if (totalScore > randomGen) {
+      alert('You lose!');
+      totalScore = 0;
+      $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+      losses++;
+      $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
+      randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
+      gem1 = randomNumberFromRange(minGuess, maxGuess);
+      gem2 = randomNumberFromRange(minGuess, maxGuess);
+      gem3 = randomNumberFromRange(minGuess, maxGuess);
+      gem4 = randomNumberFromRange(minGuess, maxGuess);
+    } else if (totalScore === randomGen) {
+      alert('You WIN!!');
+      totalScore = 0;
+      $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+      wins++;
+      $('.winLoss').html('<h1>Wins: ' + wins +     '</h1><br><h1>Losses: ' + losses + '</h1>');
+      randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
+      gem1 = randomNumberFromRange(minGuess, maxGuess);
+      gem2 = randomNumberFromRange(minGuess, maxGuess);
+      gem3 = randomNumberFromRange(minGuess, maxGuess);
+      gem4 = randomNumberFromRange(minGuess, maxGuess);
+    };
   }
 
-  
+  $('.rngShown').html('<h1>' + randomGen + '</h1>');
+  $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
+  $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-})
+  $('.gem1').click(function () {
+    totalScore += gem1;
+
+    $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
+    gameReset();
+  });
+
+  $('.gem2').click(function () {
+    totalScore += gem2;
+
+    $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
+    gameReset();
+  });
+
+  $('.gem3').click(function () {
+    totalScore += gem3;
+
+    $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
+    gameReset();
+  });
+
+  $('.gem4').click(function () {
+    totalScore += gem4;
+
+    $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
+    gameReset();
+  });
+
+});

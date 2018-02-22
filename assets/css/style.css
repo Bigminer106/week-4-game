@@ -11,32 +11,52 @@ body {
   background-color: lightsalmon;
 }
 
+div {
+  width: 550px;
+}
+
 .rules {
   font-size: 1.5rem;
   text-decoration: underline black;
 }
 
 .descript {
-  width: 550px;
   float: left;
   background-color: lightgray;
 }
 
+.rngTop {
+  background-color: red;
+}
+
 .rngShown {
-  background-color: gold;
-  width: 550px;
+  height: 100px;
 }
 
 .winLoss {
-  background-color: honeydew;
+  background-color: yellow;
   width: 550px;
+  float: left;
+  width: 100px;
+}
+
+.totalScoreTop {
+  background-color: green;
+}
+
+.totalScoreShown {
+  height: 100px;
 }
 
 .gems {
-  width: 550px;
+  background-color: gold;
+  height: 145px;
 }
 
-.totalScore {
-  background-color: green;
-  width: 550px;
+.gem1, .gem2, .gem3, .gem4 {
+  height: 125px;
+  width: 125px;
+  margin-top: 10px;
+  display: inline-block;
+  margin-left: 7.5px;
 }
