@@ -21,22 +21,34 @@ $(document).ready(function () {
   function gameReset() {
     if (totalScore > randomGen) {
       alert('You lose!');
+
       totalScore = 0;
+
       $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
       losses++;
+
       $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
+
       randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
+
       gem1 = randomNumberFromRange(minGuess, maxGuess);
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
       gem4 = randomNumberFromRange(minGuess, maxGuess);
     } else if (totalScore === randomGen) {
       alert('You WIN!!');
+
       totalScore = 0;
+
       $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
+
       wins++;
+
       $('.winLoss').html('<h1>Wins: ' + wins +     '</h1><br><h1>Losses: ' + losses + '</h1>');
+
       randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
+
       gem1 = randomNumberFromRange(minGuess, maxGuess);
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
