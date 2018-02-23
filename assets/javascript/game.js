@@ -18,7 +18,7 @@ $(document).ready(function () {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  function gameReset() {
+  function loser() {
     if (totalScore > randomGen) {
       alert('You lose!');
 
@@ -31,12 +31,17 @@ $(document).ready(function () {
       $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
 
       randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
-
+      $('.rngShown').html('<h1>' + randomGen + '</h1>');
+      
       gem1 = randomNumberFromRange(minGuess, maxGuess);
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
       gem4 = randomNumberFromRange(minGuess, maxGuess);
-    } else if (totalScore === randomGen) {
+    };
+  };
+    
+  function winner() {
+    if (totalScore === randomGen) {
       alert('You WIN!!');
 
       totalScore = 0;
@@ -48,13 +53,14 @@ $(document).ready(function () {
       $('.winLoss').html('<h1>Wins: ' + wins +     '</h1><br><h1>Losses: ' + losses + '</h1>');
 
       randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
+      $('.rngShown').html('<h1>' + randomGen + '</h1>');
 
       gem1 = randomNumberFromRange(minGuess, maxGuess);
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
       gem4 = randomNumberFromRange(minGuess, maxGuess);
-    };
-  }
+    }
+  };
 
   $('.rngShown').html('<h1>' + randomGen + '</h1>');
   $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
@@ -65,7 +71,8 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    gameReset();
+    winner();
+    loser();
   });
 
   $('.gem2').click(function () {
@@ -73,7 +80,8 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    gameReset();
+    winner();
+    loser();
   });
 
   $('.gem3').click(function () {
@@ -81,7 +89,8 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    gameReset();
+    winner();
+    loser();
   });
 
   $('.gem4').click(function () {
@@ -89,7 +98,8 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    gameReset();
+    winner();
+    loser();
   });
 
 });
