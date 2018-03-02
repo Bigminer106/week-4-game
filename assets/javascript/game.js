@@ -18,7 +18,7 @@ $(document).ready(function () {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
 
-  function loser() {
+  function winLoss() {
     if (totalScore > randomGen) {
       alert('You lose!');
 
@@ -37,11 +37,9 @@ $(document).ready(function () {
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
       gem4 = randomNumberFromRange(minGuess, maxGuess);
-    };
-  };
-    
-  function winner() {
-    if (totalScore === randomGen) {
+
+    } else if (totalScore === randomGen) {
+      
       alert('You WIN!!');
 
       totalScore = 0;
@@ -59,7 +57,7 @@ $(document).ready(function () {
       gem2 = randomNumberFromRange(minGuess, maxGuess);
       gem3 = randomNumberFromRange(minGuess, maxGuess);
       gem4 = randomNumberFromRange(minGuess, maxGuess);
-    }
+    };
   };
 
   $('.rngShown').html('<h1>' + randomGen + '</h1>');
@@ -71,8 +69,7 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    winner();
-    loser();
+    winLoss();    
   });
 
   $('.gem2').click(function () {
