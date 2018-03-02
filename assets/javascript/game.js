@@ -39,7 +39,7 @@ $(document).ready(function () {
       gem4 = randomNumberFromRange(minGuess, maxGuess);
 
     } else if (totalScore === randomGen) {
-      
+
       alert('You WIN!!');
 
       totalScore = 0;
@@ -48,7 +48,7 @@ $(document).ready(function () {
 
       wins++;
 
-      $('.winLoss').html('<h1>Wins: ' + wins +     '</h1><br><h1>Losses: ' + losses + '</h1>');
+      $('.winLoss').html('<h1>Wins: ' + wins + '</h1><br><h1>Losses: ' + losses + '</h1>');
 
       randomGen = randomNumberFromRange(minRandomGen, maxRandomGen);
       $('.rngShown').html('<h1>' + randomGen + '</h1>');
@@ -77,8 +77,7 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    winner();
-    loser();
+    winLoss();
   });
 
   $('.gem3').click(function () {
@@ -86,8 +85,7 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    winner();
-    loser();
+    winLoss();
   });
 
   $('.gem4').click(function () {
@@ -95,8 +93,6 @@ $(document).ready(function () {
 
     $('.totalScoreShown').html('<h1>' + totalScore + '</h1>');
 
-    winner();
-    loser();
+    winLoss();
   });
-
 });
