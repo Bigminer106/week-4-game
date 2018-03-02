@@ -1,16 +1,17 @@
 body {
   font-size: 36px;
   font-weight: 100%;
-  background-color: lightsteelblue;
+  background-color: navy;
 }
 
 .gameTitle {
   font-size: 3rem;
   text-decoration: underline black;
   text-align: center;
-  background-color: lightsalmon;
+  background-color: slategrey;
   margin: 0 auto;
   width: auto;
+  border-bottom: solid 3px gold;
 }
 
 div {
@@ -26,16 +27,18 @@ div {
   margin: 0 auto;
   font-size: 1.25rem;
   text-align: center;
-  background-color: lightgray;
+  background-color: slategray;
   width: 75%;
+  box-shadow: 3px 3px gold;
 }
 
 .rngTop {
-  background-color: red;
+  background-color: slategrey;
   margin: 0 auto;
   font-size: 1.5rem;
   text-align: center;
   margin-top: -10px;
+  box-shadow: 3px 3px gold;
 }
 
 .rngShown {
@@ -45,18 +48,21 @@ div {
 }
 
 .winLoss {
-  background-color: yellow;
+  background-color: slategrey;
   width: 100px;
   font-size: 1.5rem;
   margin: 0 auto;
   margin-top: -10px;
+  box-shadow: 3px 3px gold;
+  text-align: center;
 }
 
 .totalScoreTop {
-  background-color: green;
+  background-color: slategrey;
   margin: 0 auto;
   font-size: 1.5rem;
   text-align: center;
+  box-shadow: 3px 3px gold;
 }
 
 .totalScoreShown {
@@ -66,9 +72,10 @@ div {
 }
 
 .gems {
-  background-color: gold;
+  background-color: slategrey;
   height: 145px;
   margin: 0 auto;
+  box-shadow: 3px 3px gold;
 }
 
 .gem1, .gem2, .gem3, .gem4 {
